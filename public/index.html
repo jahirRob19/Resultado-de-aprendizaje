@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Usuarios</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Formulario de Usuarios</h1>
+    <div id="mensajeContainer"></div> <!-- Elemento para mostrar mensajes -->
+
+
+    <!-- Formulario para insertar usuario -->
+<form id="insertarForm">
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre" required>
+
+    <label for="correo">Correo electrónico:</label>
+    <input type="email" id="correo" name="correo" required>
+
+    <label for="password">Contraseña:</label>
+    <input type="password" id="password" name="password" required>
+
+    <label for="rol">Rol:</label>
+    <input type="text" id="rol" name="rol" required>
+
+    <button type="submit">Insertar Usuario</button>
+</form>
+
+
+<form id="actualizarForm">
+    <!-- Cambié los IDs aquí -->
+    <label for="correoActualizar">Correo electrónico a actualizar:</label>
+    <input type="email" id="correoActualizar" name="correoActualizar" required>
+
+    <label for="nombreActualizar">Nuevo nombre:</label>
+    <input type="text" id="nombreActualizar" name="nombreActualizar">
+
+    <label for="passwordActualizar">Nueva contraseña:</label>
+    <input type="password" id="passwordActualizar" name="passwordActualizar">
+
+    <label for="rolActualizar">Nuevo rol:</label>
+    <input type="text" id="rolActualizar" name="rolActualizar">
+
+    <button type="submit">Actualizar Usuario</button>
+</form>
+
+    <!-- Formulario para eliminar usuario -->
+    <form id="eliminarForm">
+        <!-- Cambié los IDs aquí -->
+        <label for="correoEliminar">Correo electrónico a eliminar:</label>
+        <input type="email" id="correoEliminar" name="correoEliminar" required>
+
+        <button type="submit">Eliminar Usuario</button>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>
